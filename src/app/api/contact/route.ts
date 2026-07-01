@@ -1,7 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// This route sends email at request time; never prerender or cache it.
+export const dynamic = 'force-dynamic'
+export const runtime = 'nodejs'
+
+// Lazy init: the Resend v6 constructor throws when the key is missing, so
+// instantiating at module load would crash the build (page-data collection)
+// on any environment where RESEND_API_KEY is not set. Build stays green;
+// a missing key is handled gracefully at runtime instead.
+function getResend(): Resend | null {
+  const key = process.env.RESEND_API_KEY
+  return key ? new Resend(key) : null
+}
 
 // Where enquiries land. For the demo this is the business Gmail.
 const TARGET_EMAIL = 'zigzag1896@gmail.com'
@@ -34,6 +45,12 @@ export async function POST(req: NextRequest) {
     }
     if (email && typeof email === 'string' && email.trim() && !validateEmail(email)) {
       return NextResponse.json({ error: 'Podaj prawidłowy adres e-mail.' }, { status: 400 })
+    }
+
+    const resend = getResend()
+    if (!resend) {
+      console.error('RESEND_API_KEY is not set — cannot send contact email.')
+      return NextResponse.json({ error: 'Wysyłka jest chwilowo niedostępna. Zadzwoń: +48 795 601 140.' }, { status: 503 })
     }
 
     const emailText = email && typeof email === 'string' ? email.trim() : ''
