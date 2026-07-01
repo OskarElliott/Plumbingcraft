@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ───────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* offset fixed navbar for anchor jumps */
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  body {
+    @apply bg-bone text-ink antialiased font-sans;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #A9744F;
+    color: #F7F5F1;
+  }
+
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+/* ── Custom scrollbar ───────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0F1B2A;
+}
+::-webkit-scrollbar-thumb {
+  background: #274158;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A9744F;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #274158 #0F1B2A;
+}
+
+/* ── Utility: fine copper rule ──────────────────────────── */
+.copper-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #A9744F 20%, #A9744F 80%, transparent);
+}
+
+/* Placeholder crosshatch for missing portfolio images */
+.placeholder-hatch {
+  background-color: #14263A;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(169, 116, 79, 0.10) 0,
+      rgba(169, 116, 79, 0.10) 1px,
+      transparent 1px,
+      transparent 14px
+    );
+}
+
+/* Hero scroll cue (compositor-only, keeps main thread idle) */
+@keyframes scrollCue {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.3; }
+}
+.scroll-cue-dot {
+  animation: scrollCue 1.8s ease-in-out infinite;
+}
+
+/* ── Reduced motion ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Skip link ──────────────────────────────────────────── */
+.skip-link {
+  @apply absolute -top-full left-4 z-[9999] bg-copper text-bone text-sm font-semibold px-4 py-2 rounded-b;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}

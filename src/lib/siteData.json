@@ -1,0 +1,174 @@
+{
+  "business": {
+    "name": "PlumbingCraft",
+    "tagline": "Kompleksowe wykonawstwo instalacji sanitarnych w budynkach i mieszkaniach. Jakość i terminowość – gwarantowane.",
+    "areaShort": "Wrocław",
+    "areaLong": "Wrocław",
+    "phone": "+48 795 601 140",
+    "phoneHref": "+48795601140",
+    "email": "zigzag1896@gmail.com",
+    "address": {
+      "street": "Rybnicka 16a/10",
+      "postal": "52-016",
+      "city": "Wrocław"
+    },
+    "hours": "Pon.–Pt. 7:00–17:00 · Sob. po wcześniejszym umówieniu",
+    "instagram": {
+      "handle": "@plumbingcraft.pl",
+      "url": "https://www.instagram.com/plumbingcraft.pl/"
+    },
+    "nip": "899-301-66-24"
+  },
+
+  "nav": [
+    { "label": "Usługi", "href": "#uslugi" },
+    { "label": "Realizacje", "href": "#realizacje" },
+    { "label": "Jak pracujemy", "href": "#proces" },
+    { "label": "O firmie", "href": "#o-firmie" },
+    { "label": "Kontakt", "href": "#kontakt" }
+  ],
+
+  "hero": {
+    "eyebrow": "Instalacje grzewcze i sanitarne · Wrocław",
+    "headlineLead": "Instalacje, które robi się",
+    "headlineAccent": "raz a dobrze.",
+    "subhead": "Kompleksowe wykonawstwo instalacji grzewczych i sanitarnych w domach, mieszkaniach i budynkach, od kotłowni po ogrzewanie podłogowe. Jakość i terminowość gwarantowane.",
+    "ctaPrimary": "Bezpłatna wycena",
+    "ctaSecondary": "Zadzwoń",
+    "image": "/realizacje/hero-kotlownia.jpg"
+  },
+
+  "trust": {
+    "_note": "PLACEHOLDER: liczby do potwierdzenia z klientem przed publikacją.",
+    "items": [
+      { "value": "10+", "label": "lat doświadczenia", "placeholder": true },
+      { "value": "250+", "label": "zrealizowanych instalacji", "placeholder": true },
+      { "value": "100%", "label": "gwarancja terminowości", "placeholder": false },
+      { "value": "Wrocław", "label": "obszar działania", "placeholder": false }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Zakres usług",
+    "heading": "Pełne wykonawstwo instalacji od projektu po odbiór",
+    "intro": "Specjalizujemy się w instalacjach grzewczych i sanitarnych dla nowych realizacji oraz remontów. Pracujemy precyzyjnie, na materiałach dobrej jakości i z dbałością o każdy detal.",
+    "items": [
+      {
+        "id": "kotlownie",
+        "icon": "Flame",
+        "title": "Instalacje grzewcze i kotłownie",
+        "description": "Kompleksowe wykonanie kotłowni i instalacji c.o.: dobór urządzeń, montaż zbiorników buforowych i rozdzielaczy, uruchomienie oraz regulacja."
+      },
+      {
+        "id": "podlogowka",
+        "icon": "ThermometerSun",
+        "title": "Ogrzewanie podłogowe",
+        "description": "Nasza specjalność. Precyzyjne układanie pętli grzewczych z równym rozstawem, rozdzielacze z regulacją i staranne próby szczelności przed wylewką.",
+        "featured": true
+      },
+      {
+        "id": "wodkan",
+        "icon": "Droplets",
+        "title": "Instalacje wodno-kanalizacyjne",
+        "description": "Rozprowadzenie wody użytkowej i kanalizacji w budynkach i mieszkaniach: od rozdzielaczy i pionów po podejścia pod biały montaż."
+      },
+      {
+        "id": "uzdatnianie",
+        "icon": "Filter",
+        "title": "Uzdatnianie i zmiękczanie wody",
+        "description": "Dobór i montaż stacji zmiękczających oraz filtracji. Lepszy smak wody, ochrona armatury i urządzeń przed osadzaniem kamienia."
+      },
+      {
+        "id": "wiercenie",
+        "icon": "Drill",
+        "title": "Wiercenie diamentowe / przewierty",
+        "description": "Czyste przewierty diamentowe w betonie, żelbecie i cegle, bez pękania i pyłu, pod przejścia instalacyjne o różnych średnicach."
+      },
+      {
+        "id": "proby",
+        "icon": "Gauge",
+        "title": "Próby ciśnieniowe i odbiory instalacji",
+        "description": "Każdą instalację poddajemy próbie ciśnieniowej i dokumentujemy odbiór. Masz pewność szczelności zanim zniknie za ścianą lub wylewką."
+      }
+    ]
+  },
+
+  "gallery": {
+    "eyebrow": "Realizacje",
+    "heading": "Nasze prace mówią za nas",
+    "intro": "Wybrane instalacje wykonane przez PlumbingCraft. Kotłownie, ogrzewanie podłogowe, rozdzielacze i przyłącza. Wszystko wykonane z dbałością o szczegół i estetykę prowadzenia rur.",
+    "images": [
+      { "src": "/realizacje/hero-kotlownia.jpg",       "alt": "Kotłownia ze zbiornikiem buforowym, kotłem i miedzianym rozdzielaczem", "orientation": "landscape" },
+      { "src": "/realizacje/rozdzielacz-podlogowka.jpg","alt": "Rozdzielacz ogrzewania podłogowego z pętlami w kolorach czerwono-niebieskich", "orientation": "portrait" },
+      { "src": "/realizacje/rozdzielacz-detal.jpg",     "alt": "Zbliżenie mosiężnego rozdzielacza z manometrem ciśnienia", "orientation": "portrait" },
+      { "src": "/realizacje/kotlownia-uzdatnianie.jpg", "alt": "Pomieszczenie techniczne ze stacją zmiękczania wody", "orientation": "landscape" },
+      { "src": "/realizacje/kotlownia-boiler.jpg",      "alt": "Zbiornik buforowy i kocioł wiszący w kotłowni", "orientation": "portrait" },
+      { "src": "/realizacje/podlogowka-petle.jpg",      "alt": "Pętle ogrzewania podłogowego rozłożone na posadzce", "orientation": "landscape" },
+      { "src": "/realizacje/wiercenie-diamentowe.jpg",  "alt": "Wiercenie diamentowe otworu w betonie", "orientation": "portrait" },
+      { "src": "/realizacje/wodkan-rough-in.jpg",       "alt": "Instalacja wodno-kanalizacyjna na etapie rough-in", "orientation": "landscape" }
+    ]
+  },
+
+  "process": {
+    "eyebrow": "Jak pracujemy",
+    "heading": "Cztery kroki do gotowej instalacji",
+    "intro": "Przejrzysty proces bez niespodzianek. Wiesz, na czym stoisz na każdym etapie.",
+    "steps": [
+      { "number": "01", "title": "Kontakt", "description": "Opowiadasz o inwestycji: nowy budynek, remont, mieszkanie. Ustalamy zakres i terminy." },
+      { "number": "02", "title": "Bezpłatna wycena", "description": "Przygotowujemy jasną, bezpłatną wycenę z zakresem prac i materiałów. Bez zobowiązań." },
+      { "number": "03", "title": "Precyzyjne wykonawstwo", "description": "Realizujemy instalację starannie i terminowo, dbając o estetykę prowadzenia rur i porządek na budowie." },
+      { "number": "04", "title": "Próba ciśnieniowa i odbiór", "description": "Wykonujemy próbę ciśnieniową, dokumentujemy odbiór i przekazujemy sprawną instalację z gwarancją." }
+    ]
+  },
+
+  "about": {
+    "eyebrow": "O firmie",
+    "heading": "Rzemiosło, precyzja i dotrzymane terminy",
+    "paragraphs": [
+      "PlumbingCraft to kompleksowe wykonawstwo instalacji sanitarnych i grzewczych w budynkach i mieszkaniach na terenie Wrocławia. Zajmujemy się kotłowniami, ogrzewaniem podłogowym, instalacjami wodno-kanalizacyjnymi oraz uzdatnianiem wody, od pierwszej rury po odbiór gotowej instalacji.",
+      "Pracujemy tak, jak sami chcielibyśmy mieć zrobione u siebie: równo prowadzone rury, staranne rozdzielacze, przemyślane kotłownie i każda instalacja sprawdzona próbą ciśnieniową. Jakość i terminowość nie są u nas hasłem. To warunek, na którym budujemy zaufanie kolejnych inwestorów."
+    ],
+    "highlights": [
+      "Nowe budynki i remonty",
+      "Estetyka prowadzenia instalacji",
+      "Terminowość potwierdzona harmonogramem",
+      "Próba ciśnieniowa każdej instalacji"
+    ]
+  },
+
+  "testimonials": {
+    "eyebrow": "Opinie",
+    "heading": "Co mówią inwestorzy",
+    "_note": "PLACEHOLDER: zebrać prawdziwe opinie klientów przed publikacją. Nie używamy zmyślonych nazwisk ani cytatów.",
+    "items": [
+      { "quote": "[Miejsce na prawdziwą opinię klienta, do uzupełnienia]", "author": "Imię / inwestycja", "placeholder": true },
+      { "quote": "[Miejsce na prawdziwą opinię klienta, do uzupełnienia]", "author": "Imię / inwestycja", "placeholder": true },
+      { "quote": "[Miejsce na prawdziwą opinię klienta, do uzupełnienia]", "author": "Imię / inwestycja", "placeholder": true }
+    ]
+  },
+
+  "area": {
+    "eyebrow": "Obszar działania",
+    "heading": "Działamy w całym Wrocławiu",
+    "intro": "Realizujemy instalacje na terenie całego Wrocławia, we wszystkich dzielnicach miasta. Masz pytanie o swoją lokalizację? Zadzwoń, chętnie doradzimy.",
+    "districts": ["Krzyki", "Fabryczna", "Śródmieście", "Psie Pole", "Stare Miasto"]
+  },
+
+  "contact": {
+    "eyebrow": "Kontakt",
+    "heading": "Porozmawiajmy o Twojej instalacji",
+    "intro": "Napisz lub zadzwoń. Przygotujemy bezpłatną wycenę i doradzimy najlepsze rozwiązanie dla Twojej inwestycji.",
+    "formNote": "Odpowiadamy zwykle w ciągu jednego dnia roboczego."
+  },
+
+  "footer": {
+    "tagline": "Instalacje grzewcze i sanitarne we Wrocławiu.",
+    "quickLinks": [
+      { "label": "Usługi", "href": "#uslugi" },
+      { "label": "Realizacje", "href": "#realizacje" },
+      { "label": "Jak pracujemy", "href": "#proces" },
+      { "label": "O firmie", "href": "#o-firmie" },
+      { "label": "Kontakt", "href": "#kontakt" }
+    ]
+  }
+}
