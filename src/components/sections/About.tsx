@@ -33,7 +33,7 @@ export function About({ image }: { image: GalleryImage }) {
           <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2" role="list">
             {data.highlights.map((h) => (
               <li key={h} className="flex items-center gap-3 text-sm text-bone/85">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-copper/15 text-copper">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue/15 text-blue">
                   <Check size={14} strokeWidth={2.5} aria-hidden="true" />
                 </span>
                 {h}
@@ -61,7 +61,7 @@ export function About({ image }: { image: GalleryImage }) {
             />
           </div>
           {/* Copper corner accent */}
-          <div className="absolute -bottom-3 -left-3 h-24 w-24 rounded-bl-2xl border-b-2 border-l-2 border-copper/60" aria-hidden="true" />
+          <div className="absolute -bottom-3 -left-3 h-24 w-24 rounded-bl-2xl border-b-2 border-l-2 border-blue/60" aria-hidden="true" />
         </motion.div>
       </div>
     </section>

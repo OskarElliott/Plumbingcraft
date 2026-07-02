@@ -12,8 +12,13 @@ import type { GalleryImage } from '@/types'
 
 const data = site.gallery
 
-// Editorial rhythm: a couple of tiles span 2 rows so the grid breathes without going messy.
-const SPAN = new Set([0, 5]) // hero-kotlownia + podlogowka-petle read as landscape features
+// Deliberate 3-tile layout: one landscape feature (index 0) + two portrait tiles.
+// Structured so 2 to 3 more photos can be added later without a redesign.
+const LAYOUT = [
+  'sm:col-span-2 lg:col-span-2 lg:row-span-2 aspect-[16/10] sm:aspect-[16/9] lg:aspect-auto',
+  'aspect-[4/3] sm:aspect-[3/4] lg:aspect-auto',
+  'aspect-[4/3] sm:aspect-[3/4] lg:aspect-auto',
+]
 
 export function Realizacje({ images }: { images: GalleryImage[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -71,11 +76,9 @@ export function Realizacje({ images }: { images: GalleryImage[] }) {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="mt-12 grid auto-rows-[220px] grid-cols-2 gap-3 sm:auto-rows-[240px] lg:grid-cols-4"
+          className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:auto-rows-[272px]"
         >
-          {images.map((img, i) => {
-            const span = SPAN.has(i)
-            return (
+          {images.map((img, i) => (
               <motion.button
                 key={img.src}
                 variants={fadeUpVariant}
@@ -85,7 +88,7 @@ export function Realizacje({ images }: { images: GalleryImage[] }) {
                 disabled={!img.available}
                 className={[
                   'group relative overflow-hidden rounded-xl border border-line',
-                  span ? 'sm:col-span-2 sm:row-span-1' : '',
+                  LAYOUT[i] ?? 'aspect-[4/3] lg:aspect-auto',
                   img.available ? 'cursor-zoom-in' : 'cursor-default',
                 ].join(' ')}
               >
@@ -94,7 +97,8 @@ export function Realizacje({ images }: { images: GalleryImage[] }) {
                   alt={img.alt}
                   available={img.available}
                   fill
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes={i === 0 ? '(max-width: 1024px) 100vw, 50vw' : '(max-width: 1024px) 50vw, 25vw'}
+                  priority={i === 0}
                   className="object-cover transition-transform duration-700 ease-editorial group-hover:scale-105"
                   placeholderLabel={img.src.split('/').pop()}
                 />
@@ -110,8 +114,7 @@ export function Realizacje({ images }: { images: GalleryImage[] }) {
                   </>
                 )}
               </motion.button>
-            )
-          })}
+          ))}
         </motion.div>
       </div>
 

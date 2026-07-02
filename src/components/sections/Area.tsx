@@ -27,7 +27,7 @@ export function Area() {
 
         <div className="flex flex-col gap-8">
           <div>
-            <h3 className="flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-copper">
+            <h3 className="flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-blue">
               <MapPin size={16} aria-hidden="true" /> Dzielnice Wrocławia
             </h3>
             <motion.ul
@@ -42,7 +42,7 @@ export function Area() {
                 <motion.li
                   key={d}
                   variants={fadeUpVariant}
-                  className="rounded-full border border-line bg-ink-800/50 px-4 py-2 text-sm text-bone/80 transition-colors duration-300 hover:border-copper/50 hover:text-bone"
+                  className="rounded-full border border-line bg-ink-800/50 px-4 py-2 text-sm text-bone/80 transition-colors duration-300 hover:border-blue/50 hover:text-bone"
                 >
                   {d}
                 </motion.li>

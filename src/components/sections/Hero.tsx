@@ -45,7 +45,7 @@ export function Hero({ imageAvailable }: { imageAvailable: boolean }) {
         />
       </motion.div>
 
-      {/* Slate gradient scrim keeps copper/bone text legible */}
+      {/* Slate gradient scrim keeps blue/bone text legible */}
       <div className="absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/70 to-ink/95" aria-hidden="true" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(169,116,79,0.18),transparent_55%)]" aria-hidden="true" />
       {/* Scroll-driven dim */}
@@ -54,9 +54,9 @@ export function Hero({ imageAvailable }: { imageAvailable: boolean }) {
       <div className="relative z-10 mx-auto w-full max-w-content px-4 py-28 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <motion.div variants={fadeInVariant} initial="hidden" animate="visible" transition={{ delay: 0.15 }}>
-            <span className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-copper-light">
+            <span className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-blue-light">
               <motion.span
-                className="h-px bg-copper"
+                className="h-px bg-blue"
                 initial={{ width: 0 }}
                 animate={{ width: 32 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
@@ -74,7 +74,7 @@ export function Hero({ imageAvailable }: { imageAvailable: boolean }) {
             className="mt-6 font-display text-display text-bone"
           >
             {hero.headlineLead}{' '}
-            <span className="text-copper">{hero.headlineAccent}</span>
+            <span className="text-blue">{hero.headlineAccent}</span>
           </motion.h1>
 
           <motion.p
@@ -98,7 +98,7 @@ export function Hero({ imageAvailable }: { imageAvailable: boolean }) {
               onClick={() => scrollTo('kontakt')}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-copper px-8 text-base font-semibold text-bone shadow-copper transition-colors duration-300 hover:bg-copper-dark"
+              className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-blue px-8 text-base font-semibold text-bone shadow-blue transition-colors duration-300 hover:bg-blue-dark"
             >
               {hero.ctaPrimary}
               <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
@@ -125,11 +125,11 @@ export function Hero({ imageAvailable }: { imageAvailable: boolean }) {
         aria-hidden="true"
       >
         <div className="flex h-9 w-6 items-start justify-center rounded-full border border-bone/25 p-1.5">
-          <span className="scroll-cue-dot h-2 w-1 rounded-full bg-copper" />
+          <span className="scroll-cue-dot h-2 w-1 rounded-full bg-blue" />
         </div>
       </motion.div>
 
-      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-copper/40 to-transparent" aria-hidden="true" />
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-blue/40 to-transparent" aria-hidden="true" />
     </section>
   )
 }

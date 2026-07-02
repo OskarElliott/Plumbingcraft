@@ -34,9 +34,9 @@ export function Process() {
         >
           {data.steps.map((step) => (
             <motion.li key={step.number} variants={fadeUpVariant} className="relative">
-              <span className="font-display text-5xl font-semibold text-copper/25">{step.number}</span>
+              <span className="font-display text-5xl font-semibold text-blue/25">{step.number}</span>
               <div className="mt-3 h-px w-full bg-ink/10">
-                <div className="h-px w-10 bg-copper" />
+                <div className="h-px w-10 bg-blue" />
               </div>
               <h3 className="mt-4 font-display text-lg font-medium text-ink">{step.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink/60">{step.description}</p>

@@ -24,7 +24,7 @@ export function MobileCta() {
     >
       <a
         href={`tel:${b.phoneHref}`}
-        className="flex min-h-[54px] items-center justify-center gap-2 rounded-full bg-copper text-base font-semibold text-bone shadow-copper"
+        className="flex min-h-[54px] items-center justify-center gap-2 rounded-full bg-blue text-base font-semibold text-bone shadow-blue"
       >
         <Phone size={18} aria-hidden="true" />
         Zadzwoń: {b.phone}

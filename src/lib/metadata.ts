@@ -7,31 +7,31 @@ const SITE_URL = 'https://plumbingcraft.pl'
 export const siteMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'PlumbingCraft | Instalacje sanitarne i grzewcze Wrocław, kotłownie i ogrzewanie podłogowe',
+    default: 'PlumbingCraft | Instalacje sanitarne Wrocław, pompy ciepła, kotły gazowe, ogrzewanie podłogowe',
     template: '%s | PlumbingCraft',
   },
   description:
-    'PlumbingCraft. Kompleksowe wykonawstwo instalacji sanitarnych i grzewczych we Wrocławiu. Kotłownie, ogrzewanie podłogowe, instalacje wodno-kanalizacyjne, uzdatnianie wody. Jakość i terminowość gwarantowane. Tel. 795 601 140.',
+    'PlumbingCraft. Kompleksowe wykonanie robót sanitarnych we Wrocławiu: pompy ciepła, ogrzewanie podłogowe, kotły gazowe, instalacje wod-kan, kotłownie i uzdatnianie wody. Jakość i terminowość gwarantowane. Tel. 795 601 140.',
   keywords: [
     'instalacje sanitarne Wrocław',
+    'pompy ciepła Wrocław',
+    'kotły gazowe Wrocław',
     'ogrzewanie podłogowe Wrocław',
     'kotłownie Wrocław',
     'instalacje grzewcze Wrocław',
-    'instalacje wodno-kanalizacyjne Wrocław',
+    'instalacje wod-kan Wrocław',
     'uzdatnianie wody Wrocław',
     'zmiękczanie wody Wrocław',
-    'wiercenie diamentowe Wrocław',
     'hydraulik Wrocław',
-    'instalacje c.o. Wrocław',
   ],
   authors: [{ name: site.business.name }],
   creator: site.business.name,
   publisher: site.business.name,
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: 'PlumbingCraft | Instalacje sanitarne i grzewcze we Wrocławiu',
+    title: 'PlumbingCraft | Kompleksowe wykonanie robót sanitarnych we Wrocławiu',
     description:
-      'Kompleksowe wykonawstwo instalacji grzewczych i sanitarnych: kotłownie, ogrzewanie podłogowe, wod-kan, uzdatnianie wody. Jakość i terminowość gwarantowane.',
+      'Pompy ciepła, ogrzewanie podłogowe, kotły gazowe, instalacje wod-kan, kotłownie i uzdatnianie wody. Jakość i terminowość gwarantowane.',
     url: SITE_URL,
     siteName: site.business.name,
     images: [
@@ -71,7 +71,7 @@ export const jsonLd = {
   '@id': `${SITE_URL}/#business`,
   name: site.business.name,
   description:
-    'Kompleksowe wykonawstwo instalacji sanitarnych i grzewczych w budynkach i mieszkaniach: kotłownie, ogrzewanie podłogowe, instalacje wodno-kanalizacyjne, uzdatnianie wody. Wrocław.',
+    'Kompleksowe wykonanie robót sanitarnych w budynkach i mieszkaniach: pompy ciepła, ogrzewanie podłogowe, kotły gazowe, instalacje wod-kan, kotłownie i uzdatnianie wody. Wrocław.',
   url: SITE_URL,
   telephone: site.business.phoneHref,
   email: site.business.email,

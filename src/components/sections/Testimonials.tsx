@@ -38,7 +38,7 @@ export function Testimonials() {
               variants={fadeUpVariant}
               className="relative flex flex-col rounded-2xl border border-ink/10 bg-white p-7 shadow-card"
             >
-              <Quote size={28} className="text-copper/40" aria-hidden="true" />
+              <Quote size={28} className="text-blue/40" aria-hidden="true" />
               <blockquote className="mt-4 flex-1 text-base leading-relaxed text-ink/70">
                 {t.quote}
               </blockquote>
@@ -46,7 +46,7 @@ export function Testimonials() {
                 {t.author}
               </figcaption>
               {t.placeholder && (
-                <span className="absolute right-5 top-5 rounded-full bg-copper/10 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-copper">
+                <span className="absolute right-5 top-5 rounded-full bg-blue/10 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-blue">
                   do uzupełnienia
                 </span>
               )}

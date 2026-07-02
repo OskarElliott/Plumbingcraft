@@ -27,13 +27,13 @@ export function FormField({
 }: FormFieldProps) {
   const base =
     'w-full rounded-lg bg-ink-900/60 border px-4 py-3 text-bone placeholder-muted/60 text-sm transition-colors ' +
-    'focus:outline-none focus:ring-2 focus:ring-copper/70 focus:border-copper min-h-[44px]'
+    'focus:outline-none focus:ring-2 focus:ring-blue/70 focus:border-blue min-h-[44px]'
   const borderState = error ? 'border-red-400/70' : 'border-line'
 
   return (
     <div>
       <label htmlFor={id} className="block text-sm font-medium text-bone/85 mb-1.5">
-        {label} {required && <span className="text-copper">*</span>}
+        {label} {required && <span className="text-blue">*</span>}
       </label>
 
       {fieldType === 'textarea' ? (

@@ -1,18 +1,18 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Flame, ThermometerSun, Droplets, Filter, Drill, Gauge, type LucideIcon } from 'lucide-react'
+import { Fan, ThermometerSun, Flame, Droplets, Gauge, Filter, type LucideIcon } from 'lucide-react'
 import { fadeUpVariant } from '@/lib/animations'
 import { cn } from '@/lib/utils'
 import type { ServiceItem } from '@/types'
 
 const ICONS: Record<string, LucideIcon> = {
-  Flame,
+  Fan,
   ThermometerSun,
+  Flame,
   Droplets,
-  Filter,
-  Drill,
   Gauge,
+  Filter,
 }
 
 export function ServiceCard({ service }: { service: ServiceItem }) {
@@ -26,16 +26,16 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
       className={cn(
         'group relative flex flex-col rounded-2xl border bg-ink-800/40 p-7 transition-colors duration-500 ease-editorial',
         'hover:bg-ink-800/70 hover:shadow-card-hover',
-        service.featured ? 'border-copper/40' : 'border-line hover:border-copper/40',
+        service.featured ? 'border-blue/40' : 'border-line hover:border-blue/40',
       )}
     >
       {service.featured && (
-        <span className="absolute right-5 top-5 rounded-full border border-copper/40 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-widest text-copper">
+        <span className="absolute right-5 top-5 rounded-full border border-blue/40 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-widest text-blue">
           Specjalność
         </span>
       )}
 
-      <span className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-copper/10 text-copper transition-colors duration-500 group-hover:bg-copper group-hover:text-bone">
+      <span className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue/10 text-blue transition-colors duration-500 group-hover:bg-blue group-hover:text-bone">
         <Icon size={22} strokeWidth={1.6} aria-hidden="true" />
       </span>
 

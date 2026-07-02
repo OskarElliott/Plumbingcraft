@@ -15,12 +15,12 @@ import { getSiteData } from '@/lib/siteData.server'
 export default function HomePage() {
   const data = getSiteData()
   const { images } = data.gallery
-  // About portrait image: kotlownia-boiler (index 4); falls back to first if reordered.
-  const aboutImage = images[4] ?? images[0]
+  // About portrait image: kotlownia-kociol (index 1); falls back to first if reordered.
+  const aboutImage = images[1] ?? images[0]
 
   return (
     <>
-      <Navbar />
+      <Navbar logoAvailable={data.logoAvailable} />
       <Hero imageAvailable={data.hero.imageAvailable} />
       <TrustStrip />
       <Services />
@@ -30,7 +30,7 @@ export default function HomePage() {
       <Testimonials />
       <Area />
       <Contact />
-      <Footer />
+      <Footer logoAvailable={data.logoAvailable} />
       <MobileCta />
     </>
   )

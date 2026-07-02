@@ -19,11 +19,11 @@ const config: Config = {
           200: '#EDE9E1',
           300: '#DED8CC',
         },
-        // Brushed copper accent: references the real pipework and the "Craft" in the name
-        copper: {
-          DEFAULT: '#A9744F',
-          light: '#C0895F',
-          dark: '#8A5C3D',
+        // Deep, refined blue drawn from the logo (CTAs, links, rules, hovers)
+        blue: {
+          DEFAULT: '#1F63C4',
+          light: '#3E82DF',
+          dark: '#164C97',
         },
         muted: '#8494A5',   // muted text on dark
         line: '#26374A',    // hairline rules on dark
@@ -44,7 +44,7 @@ const config: Config = {
       boxShadow: {
         card: '0 1px 2px rgba(15,27,42,0.04), 0 10px 30px rgba(15,27,42,0.06)',
         'card-hover': '0 8px 40px rgba(15,27,42,0.14)',
-        copper: '0 6px 24px rgba(169,116,79,0.35)',
+        blue: '0 6px 24px rgba(31,99,196,0.35)',
       },
       transitionTimingFunction: {
         editorial: 'cubic-bezier(0.22, 1, 0.36, 1)',

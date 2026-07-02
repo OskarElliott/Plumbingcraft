@@ -91,7 +91,7 @@ export function Contact() {
 
             <a
               href={`tel:${b.phoneHref}`}
-              className="mt-8 block font-display text-4xl font-semibold text-copper transition-colors hover:text-copper-light"
+              className="mt-8 block font-display text-4xl font-semibold text-blue transition-colors hover:text-blue-light"
             >
               {b.phone}
             </a>
@@ -105,7 +105,7 @@ export function Contact() {
               ].map(({ icon: Icon, label, href }) => {
                 const inner = (
                   <>
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-bone/5 text-copper">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-bone/5 text-blue">
                       <Icon size={16} aria-hidden="true" />
                     </span>
                     <span>{label}</span>
@@ -137,7 +137,7 @@ export function Contact() {
           >
             {submitted ? (
               <div className="flex flex-col items-center gap-4 py-10 text-center" role="status" aria-live="polite">
-                <CheckCircle size={48} className="text-copper" aria-hidden="true" />
+                <CheckCircle size={48} className="text-blue" aria-hidden="true" />
                 <h3 className="font-display text-xl font-medium text-bone">Wiadomość wysłana!</h3>
                 <p className="max-w-xs text-sm text-muted">
                   Dziękujemy za kontakt. Odezwiemy się najczęściej w ciągu jednego dnia roboczego.
@@ -189,7 +189,7 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="min-h-[52px] w-full rounded-full bg-copper text-base font-semibold text-bone shadow-copper transition-all duration-300 hover:bg-copper-dark disabled:cursor-not-allowed disabled:opacity-60"
+                    className="min-h-[52px] w-full rounded-full bg-blue text-base font-semibold text-bone shadow-blue transition-all duration-300 hover:bg-blue-dark disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     {submitting ? 'Wysyłanie...' : 'Wyślij zapytanie'}
                   </button>

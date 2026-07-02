@@ -24,6 +24,7 @@ function fileExists(publicPath: string): boolean {
 export type SiteData = typeof raw & {
   gallery: (typeof raw)['gallery'] & { images: GalleryImage[] }
   hero: (typeof raw)['hero'] & { imageAvailable: boolean }
+  logoAvailable: boolean
 }
 
 export function getSiteData(): SiteData {
@@ -34,6 +35,7 @@ export function getSiteData(): SiteData {
 
   return {
     ...raw,
+    logoAvailable: fileExists('/logo.png'),
     hero: { ...raw.hero, imageAvailable: fileExists(raw.hero.image) },
     gallery: { ...raw.gallery, images },
   } as SiteData

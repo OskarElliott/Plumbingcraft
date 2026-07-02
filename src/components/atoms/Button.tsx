@@ -11,14 +11,14 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    'bg-copper text-bone font-semibold hover:bg-copper-dark shadow-copper ' +
-    'focus-visible:ring-2 focus-visible:ring-copper-light focus-visible:ring-offset-2 focus-visible:ring-offset-ink',
+    'bg-blue text-bone font-semibold hover:bg-blue-dark shadow-blue ' +
+    'focus-visible:ring-2 focus-visible:ring-blue-light focus-visible:ring-offset-2 focus-visible:ring-offset-ink',
   ghost:
     'bg-transparent text-bone border border-bone/25 font-medium hover:bg-bone/10 hover:border-bone/40 ' +
     'focus-visible:ring-2 focus-visible:ring-bone focus-visible:ring-offset-2 focus-visible:ring-offset-ink',
   outline:
-    'bg-transparent text-ink border border-ink/20 font-medium hover:border-copper hover:text-copper ' +
-    'focus-visible:ring-2 focus-visible:ring-copper focus-visible:ring-offset-2',
+    'bg-transparent text-ink border border-ink/20 font-medium hover:border-blue hover:text-blue ' +
+    'focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2',
 }
 
 const sizeClasses: Record<Size, string> = {

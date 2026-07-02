@@ -18,7 +18,7 @@
   }
 
   ::selection {
-    background: #A9744F;
+    background: #1F63C4;
     color: #F7F5F1;
   }
 
@@ -39,17 +39,17 @@
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #A9744F;
+  background: #1F63C4;
 }
 * {
   scrollbar-width: thin;
   scrollbar-color: #274158 #0F1B2A;
 }
 
-/* ── Utility: fine copper rule ──────────────────────────── */
-.copper-rule {
+/* ── Utility: fine blue rule ────────────────────────────── */
+.accent-rule {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #A9744F 20%, #A9744F 80%, transparent);
+  background: linear-gradient(90deg, transparent, #1F63C4 20%, #1F63C4 80%, transparent);
 }
 
 /* Placeholder crosshatch for missing portfolio images */
@@ -58,8 +58,8 @@
   background-image:
     repeating-linear-gradient(
       45deg,
-      rgba(169, 116, 79, 0.10) 0,
-      rgba(169, 116, 79, 0.10) 1px,
+      rgba(31, 99, 196, 0.12) 0,
+      rgba(31, 99, 196, 0.12) 1px,
       transparent 1px,
       transparent 14px
     );
@@ -88,7 +88,7 @@
 
 /* ── Skip link ──────────────────────────────────────────── */
 .skip-link {
-  @apply absolute -top-full left-4 z-[9999] bg-copper text-bone text-sm font-semibold px-4 py-2 rounded-b;
+  @apply absolute -top-full left-4 z-[9999] bg-blue text-bone text-sm font-semibold px-4 py-2 rounded-b;
   transition: top 0.2s;
 }
 .skip-link:focus {

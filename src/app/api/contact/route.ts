@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { site } from '@/lib/siteData'
 
 // This route sends email at request time; never prerender or cache it.
 export const dynamic = 'force-dynamic'
@@ -14,8 +15,9 @@ function getResend(): Resend | null {
   return key ? new Resend(key) : null
 }
 
-// Where enquiries land. For the demo this is the business Gmail.
-const TARGET_EMAIL = 'zigzag1896@gmail.com'
+// Where enquiries land. Single source of truth is siteData.json (business.email),
+// so the client can switch the recipient in one place (e.g. to zigzag1896@gmail.com).
+const TARGET_EMAIL = site.business.email
 
 // DEMO sender. Resend's shared onboarding@resend.dev delivers without a verified domain.
 // TODO (once plumbingcraft.pl is verified in Resend): switch to
@@ -60,7 +62,7 @@ export async function POST(req: NextRequest) {
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
         <div style="background-color: #0F1B2A; color: #F7F5F1; padding: 24px; border-radius: 8px 8px 0 0;">
           <h2 style="margin: 0; font-size: 20px;">Nowe zapytanie ze strony</h2>
-          <p style="margin: 4px 0 0 0; color: #C0895F; font-size: 14px;">PlumbingCraft · plumbingcraft.pl</p>
+          <p style="margin: 4px 0 0 0; color: #3E82DF; font-size: 14px;">PlumbingCraft · plumbingcraft.pl</p>
         </div>
         <div style="background-color: #F7F5F1; padding: 24px; border: 1px solid #DED8CC; border-top: none; border-radius: 0 0 8px 8px;">
           <table style="width: 100%; border-collapse: collapse;">
@@ -71,14 +73,14 @@ export async function POST(req: NextRequest) {
             <tr>
               <td style="padding: 12px 0; border-bottom: 1px solid #DED8CC; font-weight: bold; color: #0F1B2A;">Telefon:</td>
               <td style="padding: 12px 0; border-bottom: 1px solid #DED8CC;">
-                <a href="tel:${escapeHtml(phone)}" style="color: #8A5C3D; font-weight: bold; font-size: 18px; text-decoration: none;">${escapeHtml(phone)}</a>
+                <a href="tel:${escapeHtml(phone)}" style="color: #164C97; font-weight: bold; font-size: 18px; text-decoration: none;">${escapeHtml(phone)}</a>
               </td>
             </tr>
             ${emailText ? `
             <tr>
               <td style="padding: 12px 0; border-bottom: 1px solid #DED8CC; font-weight: bold; color: #0F1B2A;">E-mail:</td>
               <td style="padding: 12px 0; border-bottom: 1px solid #DED8CC; color: #0F1B2A;">
-                <a href="mailto:${escapeHtml(emailText)}" style="color: #8A5C3D; text-decoration: none;">${escapeHtml(emailText)}</a>
+                <a href="mailto:${escapeHtml(emailText)}" style="color: #164C97; text-decoration: none;">${escapeHtml(emailText)}</a>
               </td>
             </tr>` : ''}
             ${messageText ? `
