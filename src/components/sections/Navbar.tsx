@@ -15,7 +15,7 @@ export function Navbar({ logoAvailable }: { logoAvailable: boolean }) {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8)
+    const onScroll = () => setScrolled(window.scrollY > 24)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -28,17 +28,21 @@ export function Navbar({ logoAvailable }: { logoAvailable: boolean }) {
     }
   }, [open])
 
+  // Solid bone bar once scrolled (or when the mobile menu is open); transparent over the hero at the top.
+  const solid = scrolled || open
+
   return (
     <header
       className={cn(
-        // Logo lives on a light bone surface only.
-        'fixed inset-x-0 top-0 z-50 bg-bone/95 backdrop-blur-md transition-shadow duration-300',
-        scrolled || open ? 'border-b border-ink/10 shadow-[0_1px_20px_rgba(15,27,42,0.06)]' : 'border-b border-ink/5',
+        'fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-editorial',
+        solid
+          ? 'bg-bone/95 backdrop-blur-md border-b border-ink/10 shadow-[0_1px_20px_rgba(15,27,42,0.06)]'
+          : 'bg-transparent border-b border-transparent',
       )}
     >
       <nav className="mx-auto flex h-16 max-w-content items-center justify-between px-4 sm:px-6 lg:px-8 md:h-20">
         <a href="#" aria-label="PlumbingCraft, strona główna">
-          <Logo available={logoAvailable} showSubtitle />
+          <Logo available={logoAvailable} tone={solid ? 'dark' : 'light'} showSubtitle />
         </a>
 
         {/* Desktop nav */}
@@ -47,7 +51,10 @@ export function Navbar({ logoAvailable }: { logoAvailable: boolean }) {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-ink/70 transition-colors hover:text-ink"
+              className={cn(
+                'text-sm font-medium transition-colors',
+                solid ? 'text-ink/70 hover:text-ink' : 'text-bone/80 hover:text-bone',
+              )}
             >
               {item.label}
             </a>
@@ -65,7 +72,10 @@ export function Navbar({ logoAvailable }: { logoAvailable: boolean }) {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-11 w-11 items-center justify-center rounded-lg text-ink lg:hidden"
+          className={cn(
+            'flex h-11 w-11 items-center justify-center rounded-lg transition-colors lg:hidden',
+            solid ? 'text-ink' : 'text-bone',
+          )}
           aria-label={open ? 'Zamknij menu' : 'Otwórz menu'}
           aria-expanded={open}
         >
